@@ -625,9 +625,6 @@ examples:
         az deployment group create --resource-group testrg --name rollout01 \\
             --template-file azuredeploy.json  --parameters @params.json \\
             --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
-  - name: Create a deployment at subscription scope from a template-spec
-    text: >
-        az deployment group create --resource-group testrg --template-spec "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testrg/providers/Microsoft.Resources/templateSpecs/myTemplateSpec/versions/1.0"
 """
 
 helps['deployment group what-if'] = """
